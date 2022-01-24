@@ -1,0 +1,147 @@
+:root{
+  --primary: #f393fd;
+  --primary-darken: rgb(130, 130, 130);
+  --bg: rgb(224, 215, 215);
+  --shadow: 2px 0 8px rgba(77, 77, 77, 0.3);
+  --corners: 4px;
+  --text-color: rgb(59, 59, 59);
+  --dark: rgb(59, 59, 59);
+  --light: rgb(247, 247, 247);
+  /* missing color from tutorial vid on change player button*/
+}
+
+body{
+  background-color: var(--bg);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 16pt;
+  color: var(--text-color)
+}
+
+header{
+  margin: 3em 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+form{
+  margin: 0;
+}
+
+input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-color);
+  outline: none;
+  font-size: 14pt;
+}
+
+button{
+  background-color: var(--primary);
+  color: var(--light);
+  border: 1px solid var(--primary-darken);
+  border-radius: var(--corners);
+  box-shadow: var(--shadow);
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  padding: 1em;
+}
+
+button:hover{
+  background-color: var(--bg);
+}
+
+.balloon{
+  height: 50px;
+  width: 15px;
+  background-color: blue;
+  border-radius: 50%;
+  transition: all .1s ease;
+  animation: balloon-float 5s ease-in-out infinite;
+  align-self: flex-end;
+  margin: 0 auto;
+  box-shadow: inset -10px -10px 12px rgba(77, 77, 77, 0.3);
+  background: radial-gradient(circle, rgba(9,0,171,1) 0%, rgba(0,0,255,1) 55%, rgba(48,221,255,1) 100%);
+}
+
+
+
+@keyframes balloon-float{
+  0%, 100% {
+    transform: translateY(-8px) rotate(5deg)
+  }
+  50%{
+    transform: translateY(0px) rotate(-5deg);
+  }
+}
+
+.container{
+  width: 50%;
+  margin: auto;
+}
+
+.card{
+  background-color: var(--light);
+  padding: 1em;
+  box-shadow: var(--shadow);
+  border-radius: var(--corners);
+}
+
+.shadow{
+  filter: drop-shadow(var(--shadow));
+}
+
+.bg-dark{
+  background-color: var(--dark);
+}
+
+.text-light{
+  color: var(--light)
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+.d-flex.space-between{
+  justify-content: space-between;
+}
+
+.d-flex.space-around{
+  justify-content:space-around;
+}
+
+.mt-1{
+  margin-top: .5em;
+}
+
+.mt-2{
+  margin-top: 1em;
+}
+
+.mt-3{
+  margin-top: 1.5em;
+}
+
+.mb-1{
+  margin-bottom: .5em;
+}
+
+.mb-2{
+  margin-bottom: 1em;
+}
+
+.mb-3{
+  margin-bottom: 1.5em;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.hidden{
+  display: none !important;
+}
